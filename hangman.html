@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="hangman.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <title>Hangman</title>
+
+</head>
+
+<body>
+    <div class="container-init" id="init">
+        <div class="contrainer-init__welcome">
+            <img src="images-hangman/logo-ahorcado.png" alt="logo-ahorcado" width="300px" height="300px">
+            <h3>Welcome to hangman</h3>
+            <h4>Hangman is a simple word guessing game. Players try to figure out an unknown word by guessing letters.
+                If too many letters which do not appear in the word are guessed, the player is hanged (and loses).</h4>
+        </div>
+        <div class="container-init__name">
+            <label for="name">Enter your name</label>
+            <input type="text" id="name" name="name" required>
+            <input type="button" id="start-button" value="START" onclick="gameDisplay()">
+        </div>
+
+    </div>
+    <div class="container-game" id="game">
+        <div class="container-game__image" id="image">
+            <img src="images-hangman/1.jpg" id="images" alt="logo-ahorcado" width="200px" height="300px">
+        </div>
+        <div class="containter-game__clue">
+            <p id="category">Category</p>
+            <p id="clue">Clue</p>
+        </div>
+        <div class="container-game__question">
+            <p id="show-question"></p>
+        </div>
+        <div class="container-game__answer">
+            
+            <div class="containter-game__answer-letters">
+                <div class="letters" id="letters">
+                    <input type="button" class="letters" value="A" onclick="checkLetter('A')">
+                    <input type="button" class="letters" value="B" onclick="checkLetter('B')">
+                    <input type="button" class="letters" value="C" onclick="checkLetter('C')">
+                    <input type="button" class="letters" value="D" onclick="checkLetter('D')">
+                    <input type="button" class="letters" value="E" onclick="checkLetter('E')">
+                    <input type="button" class="letters" value="F" onclick="checkLetter('F')">
+                    <input type="button" class="letters" value="G" onclick="checkLetter('G')">
+                    <input type="button" class="letters" value="H" onclick="checkLetter('H')">
+                    <input type="button" class="letters" value="I" onclick="checkLetter('I')">
+                    <input type="button" class="letters" value="J" onclick="checkLetter('J')">
+                    <input type="button" class="letters" value="K" onclick="checkLetter('K')">
+                    <input type="button" class="letters" value="L" onclick="checkLetter('L')">
+                    <input type="button" class="letters" value="M" onclick="checkLetter('M')">
+                    <input type="button" class="letters" value="N" onclick="checkLetter('N')">
+                    <input type="button" class="letters" value="O" onclick="checkLetter('O')">
+                    <input type="button" class="letters" value="P" onclick="checkLetter('P')">
+                    <input type="button" class="letters" value="Q" onclick="checkLetter('Q')">
+                    <input type="button" class="letters" value="R" onclick="checkLetter('R')">
+                    <input type="button" class="letters" value="S" onclick="checkLetter('S')">
+                    <input type="button" class="letters" value="T" onclick="checkLetter('T')">
+                    <input type="button" class="letters" value="U" onclick="checkLetter('U')">
+                    <input type="button" class="letters" value="V" onclick="checkLetter('V')">
+                    <input type="button" class="letters" value="W" onclick="checkLetter('W')">
+                    <input type="button" class="letters" value="X" onclick="checkLetter('X')">
+                    <input type="button" class="letters" value="Y" onclick="checkLetter('Y')">
+                    <input type="button" class="letters" value="Z" onclick="checkLetter('Z')">
+                </div>
+                <h4 >Attempts:<span id="attempts">5</span></h4>
+            </div>
+        </div>
+        <div class="container-game__quit">
+            <input type="button" id="quit-button" value="QUIT" onclick="quitGame()">
+        </div>
+    </div>
+
+    <div class="container-finish" id="finish">
+        <p id="final-message">
+           text
+        </p>
+        <input type="button" id="finish-button" value="PLAY AGAIN" onclick="replay()">
+    </div>
+    <footer>Made by <span> <a href="https://github.com/YanaYur"> Yana </a> </span></footer>
+    <script type="text/javascript" src="hangman.js"></script>
+</body>
+
+</html>

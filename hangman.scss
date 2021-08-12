@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    font-family: "Syne Mono", monospace;
+}
+
+.container-init {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 20px;
+
+    &__welcome {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        letter-spacing: 3px;
+
+        h3 {
+            font-size: 30px;
+        }
+
+        h4 {
+            display: flex;
+            width: 50%;
+            height: 150px;
+        }
+    }
+
+    &__name {
+        display: flex;
+        letter-spacing: 2px;
+        font-size: 20px;
+        font-style: bold;
+
+        input {
+            font-size: 20px;
+            width: 20%;
+            background-color: black;
+            color: white;
+            margin: 5px;
+            cursor: pointer;
+        }
+        
+    }
+}
+
+.container-game {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 70vh;
+
+    &__image {
+        display: flex;
+        width: 200px;
+        height: 300px;
+        background-color: white;
+        margin-bottom: 10px;
+    }
+
+    &__question {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+    }
+    #category {
+        height: 30px;
+        font-size: 25px;
+        text-align: center;
+    }
+    &__clue {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+
+        #clue {
+            height: 30px;
+            font-size: 25px;
+            text-align: center;
+        }
+    }
+
+    &__answer {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding-top: 25px;
+
+        input {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: solid 1px white;
+            height: 40px;
+            width: 40px;
+            color: white;
+            margin: 2px;
+            background-color: transparent;
+            font-family: "Syne Mono", monospace;
+        }
+        h4 {
+            padding-top: 20px;
+        }
+    }
+
+    &__quit {
+       padding-top: 20px;
+       padding-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        #quit-button{
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            margin: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+#letters {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    height: 100px;
+    padding-left: 25px;
+}
+
+.container-finish {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 300px;
+    height: 150px;
+    background-color: black;
+    border: solid 3px white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    #final-message{
+        padding-top: 15px;
+    }
+
+    input {
+        align-items: center;
+        background-color: white;
+        width: 100px;
+        height: 40px;
+        color: black;
+        font-size: 15px;
+        padding: 5px;
+        margin-top: 15px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    padding-top: 20px;
+    color: white;
+    a{
+        color:rgb(247, 196, 196);
+    }
+    
+}
